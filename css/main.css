@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Title";
+    src: url("../assets/fonts/BNLemonz-Bold.otf")
+}
+
+@font-face {
+    font-family: "Subtitle";
+    src: url("../assets/fonts/PPEditorialNew-ThinItalic.ttf")
+}
+
+body {
+    font-size: 16;
+}
+
+
+h1 {
+    font-family: "Title", 'Helvetica', sans-serif;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: "Subtitle", 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
