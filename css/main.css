@@ -8,17 +8,51 @@
     src: url("../assets/fonts/PPEditorialNew-ThinItalic.ttf")
 }
 
+:root {
+    --palette-blue: rgba(30,83,235);
+    --palette-cream: rgba(249,248,242);
+    /* --palette-cream: rgb(250, 238, 236); */
+    --palette-white: rgba(255,255,255);
+
+    --gradient-one: linear-gradient(var(--palette-cream) 60%, var(--palette-blue));
+}
+
 body {
     font-size: 16;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--palette-white); */
+    background-image: var(--gradient-one);
+
+    box-sizing: border-box;
+    margin: 0px;
+    /* padding: 10px; */
 }
 
 
 h1 {
     font-family: "Title", 'Helvetica', sans-serif;
     font-size: 3em;
+    margin: 0px;
+    padding: 0px;
 }
 
 h2 {
     font-family: "Subtitle", 'Times New Roman', Times, serif;
-    font-size: 2em;
+    font-size: 1.5em;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    display: inline-block;
+    position: relative;
+    color: var(--palette-blue);
+    margin-left: 2%;
+    margin-top: 2%;
+    transform: rotate(-3deg);
+}
+
+.header h2 {
+    margin-top: -10px;
 }
