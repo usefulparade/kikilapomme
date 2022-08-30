@@ -40,7 +40,7 @@ body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    cursor:url("/assets/icon-macpaint-pencil.png") 0 32, auto;
+    cursor:url(../assets/icon-macpaint-pencil.png) 0 32, auto;
 }
 
 #illustration
