@@ -1,0 +1,33 @@
+
+
+#notdrawings
+{
+    background-image: var(--gradient-two);
+}
+
+.header
+{
+    color: var(--palette-mandarin);
+}
+
+
+.notdrawings-image img
+{
+    border: solid 4px var(--palette-mandarin);
+    box-shadow: -5px 5px var(--palette-mandarin);
+}
+
+.nav-notdrawings
+{
+    background-color: var(--palette-mandarin);
+}
+
+.nav-notdrawings#active
+{
+    color: var(--palette-mandarin);
+}
+
+/* .nav-notdrawings:hover
+{
+    background-color: var(--palette-blue);
+} */

@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: "Title";
     src: url("../assets/fonts/sans-bold.otf")
@@ -17,24 +19,34 @@
     --palette-blue: rgba(30,83,235);
     --palette-cream: rgba(249,248,242);
     --palette-white: rgba(255,255,255);
-    --palette-mandarin: rgb(231, 150, 0);
+    --palette-mandarin: rgb(255, 148, 0);
+    --palette-yellow: rgb(255, 208, 0);
+    --palette-purple: rgb(89, 59, 148);
+    --palette-coral: rgb(255, 127, 80);
 
     --gradient-one: linear-gradient(var(--palette-cream) 20%, var(--palette-blue) 75%);
-    --gradient-overlay: linear-gradient(var(--palette-cream) 2%, rgba(255,255,255,0) 15%)
+    --gradient-two: linear-gradient(var(--palette-cream) 20%, var(--palette-mandarin) 75%);
+    --gradient-three: linear-gradient(var(--palette-cream) 20%, var(--palette-purple) 75%);
+    --gradient-four: linear-gradient(var(--palette-cream) 20%, var(--palette-coral) 75%);
+    --gradient-overlay: linear-gradient(var(--palette-cream) 3%, rgba(255,255,255,0) 16%);
 }
 
 body {
     font-size: 16;
     width: 100vw;
     height: 100vh;
-    /* background-color: var(--palette-white); */
-    background-image: var(--gradient-one);
+    background-color: var(--palette-cream);
+    /* background-image: var(--gradient-one); */
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     cursor:url(/assets/icon-macpaint-pencil.png) 0 32, auto;
 }
 
+#illustration
+{
+    background-image: var(--gradient-one);
+}
 
 h1 {
     font-family: "Title", 'Helvetica', sans-serif;
@@ -48,6 +60,20 @@ h2 {
     font-size: 1.5em;
     margin: 0px;
     padding: 0px;
+}
+
+a
+{
+    color: var(--palette-blue);
+    /* background-color: var(--palette-blue);  */
+}
+a:visited
+{
+    color: var(--palette-blue);
+}
+a:hover
+{
+    color: var(--palette-yellow);
 }
 
 .p5canvas
@@ -73,7 +99,7 @@ h2 {
 
 .header:hover
 {
-    color: var(--palette-mandarin);
+    color: var(--palette-yellow);
 }
 
 .header h2 {
@@ -90,6 +116,7 @@ h2 {
     height: 90px;
     border-top: 4px solid var(--palette-cream);
     box-sizing: border-box;
+    z-index: 10;
 }
 
 .nav-item 
@@ -110,8 +137,8 @@ h2 {
 
 .nav-item:hover
 {
-    background-color: var(--palette-mandarin);
-    color: var(--palette-cream)
+    background-color: var(--palette-yellow);
+    color: var(--palette-cream);
 }
 
 #active
@@ -137,25 +164,28 @@ h2 {
     position: fixed;
     z-index: 10;
     width: 100vw;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     height: calc(100% - 90px);
     overflow-y: scroll;
     box-sizing: border-box;
     padding: 20px;
     padding-top: 100px;
-    right: 0;
+    /* right: 0; */
 }
 
 .portfolio-image
 {
     display: inline-block;
     position: relative;
-    width: 50%;
+    width: 33.3%;
     box-sizing: border-box;
-    padding: 10%;
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
     filter: opacity(0);
-    transform: translateY(50px);
+    transform: translateY(50px) rotate(0deg);
     transition: 1s;
+    user-select: none;
 }
 
 .portfolio-image img
@@ -163,10 +193,48 @@ h2 {
     display: inline-block;
     position: relative;
     width: 100%;
+    /* max-width: 400px; */
     padding: 0px;
     border: solid 4px var(--palette-blue);
     border-radius: 10px;
+    box-shadow: -5px 5px var(--palette-blue);
+    filter:brightness(0.9);
 }
+
+.portfolio-image img:hover
+{
+    border: solid 4px var(--palette-yellow);
+    border-radius: 10px;
+    box-shadow: -5px 5px var(--palette-yellow);
+    filter:brightness(1);
+}
+
+.portfolio-image p
+{
+    display: block;
+    position: fixed;
+    font-family: "Subtitle", "Times New Roman", serif;
+    font-size: 1.5em;
+    text-align: right;
+    background-color: var(--palette-cream);
+    padding: 10px;
+    margin: 0px;
+    margin-left: 20px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+
+.hero
+{
+    width: 100%;
+}
+
+.hero
+{
+    width: 100%;
+}
+
 
 
 
@@ -175,6 +243,10 @@ h2 {
     .portfolio-image
     {
         width: 50%;
+    }
+
+    .hero{
+        width: 100%;
     }
 
 }

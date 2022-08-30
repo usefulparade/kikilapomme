@@ -2,6 +2,7 @@
 let c;
 let lines;
 let currentLine;
+let drawImage;
 
 function setup()
 {
@@ -11,6 +12,8 @@ function setup()
     c = createCanvas(windowWidth, windowHeight);
     c.parent("#p5canvas");
     c.style.height = "100%";
+    
+    drawImage = loadImage('./assets/icon-macpaint-pencil.png');
 }
 
 function draw()
@@ -18,8 +21,8 @@ function draw()
     clear();
     // fill(231,150,0);
     // stroke(231,150,0);
-    stroke(249,248,242);
-    strokeWeight(10);
+    // stroke(255,0,0);
+    // strokeWeight(10);
     // lines[currentLine].push(new p5.Vector(mouseX, mouseY));
 
     for (j=0;j<lines.length;j++)
@@ -28,7 +31,8 @@ function draw()
         {
             if (i>0)
             {
-                line(lines[j][i].x, lines[j][i].y, lines[j][i-1].x, lines[j][i-1].y);
+                image(drawImage, lines[j][i].x, lines[j][i].y -32);
+                // line(lines[j][i].x, lines[j][i].y, lines[j][i-1].x, lines[j][i-1].y);
             }
         }
 
