@@ -38,13 +38,14 @@
 
 .portrait
 {
-    display: inline-block;
-    position: relative;
-    width: 33.33%;
+    display: block;
+    position: fixed;
+    width: 500px;
     padding: 40px;
     box-sizing: border-box;
     pointer-events: none;
     z-index: -30;
+    transform: rotate(-9deg);
 }
 
 
@@ -57,21 +58,88 @@
     z-index: -20;
 }
 
-.about
+.pinned
 {
-    display: inline-block;
-    position: relative;
-    width: 66.66%;
+    display: block;
+    position: fixed;
+    width: 90px;
     padding: 40px;
     box-sizing: border-box;
-    vertical-align: top;
+    pointer-events: none;
+    z-index: -30;
+}
+
+.pin01
+{
+    width: 280px;
+    top: -20px;
+    left: 76%;
+    transform: rotate(18deg);
+    z-index:30;
+}
+
+.pin02
+{
+    width: 200px;
+    bottom: 130px;
+    left: calc(80%);
+    transform: rotate(-12deg);
+    z-index: 30;
+}
+
+.pin03
+{
+    width: 220px;
+    bottom: 60px;
+    left: calc(20% - 180px);
+    transform: rotate(8deg);
+    z-index: 30;
+}
+
+.pinned img
+{
+    width: 100%;
+    border: 4px solid var(--palette-coral);
+    border-radius: 10px;
+    box-shadow: -5px 5px var(--palette-coral);
+    z-index: -20;
+}
+
+.about
+{
+    display: block;
+    position: fixed;
+    top: 15%;
+    left: 20%;
+    width: 66.66%;
+    padding: 40px;
+    padding-top: 0px;
+    box-sizing: border-box;
+    /* vertical-align: top; */
     line-height: 1;
     cursor: text;
     color: var(--palette-coral);
     background-color: var(--palette-cream);
     border-radius: 10px;
-    margin-top: 3%;
+    margin-top: 7%;
+    max-height: 70%;
+    overflow-y: scroll;
 
+}
+
+@media only screen and (max-width: 1600px)
+{
+    .portrait
+    {
+        width: 400px;
+        
+    }
+
+    .pin03
+    {
+        width: 220px;
+        transform: rotate(8deg);
+    }
 }
 
 @media only screen and (max-width: 720px){
@@ -79,12 +147,47 @@
     
     .portrait
     {
-        width: 50%;
+        width: 200px;
+        padding: 0px;
+        display: none;
+    }
+
+    .pin01
+    {
+        width: 200px;
+        top: -70px;
+        left: 55%;
+    }
+
+    .pin02
+    {
+        width: 160px;
+        bottom: 130px;
+        left: calc(75%);
+        transform: rotate(-12deg);
+        z-index: 30;
+    }
+
+    .pin03
+    {
+        width: 140px;
+        left: -40px;
+        transform: rotate(8deg);
     }
 
     .about
     {
         width: 100%;
+        left: 0px;
         margin-top: 0px;
+        margin-left: 40px;
+        width: calc(100% - 80px);
+        max-height: 80%;
     }
+
+    
+}
+
+@media only screen and (max-width: 500px){
+
 }

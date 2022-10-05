@@ -180,12 +180,13 @@ a:hover
     width: 33.3%;
     box-sizing: border-box;
     padding: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     filter: opacity(0);
     transform: translateY(50px) rotate(0deg);
     transition: 1s;
     user-select: none;
+    vertical-align: middle;
 }
 
 .portfolio-image img
