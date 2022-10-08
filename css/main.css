@@ -16,13 +16,13 @@
 }
 
 :root {
-    --palette-blue: rgba(30,83,235);
-    --palette-cream: rgba(249,248,242);
-    --palette-white: rgba(255,255,255);
-    --palette-mandarin: rgb(255, 148, 0);
-    --palette-yellow: rgb(255, 208, 0);
-    --palette-purple: rgb(89, 59, 148);
-    --palette-coral: rgb(255, 127, 80);
+    --palette-blue: rgba(30,83,235,1);
+    --palette-cream: rgba(249,248,242,1);
+    --palette-white: rgba(255,255,255,1);
+    --palette-mandarin: rgba(255, 148, 0,1);
+    --palette-yellow: rgba(255, 208, 0,1);
+    --palette-purple: rgba(89, 59, 148,1);
+    --palette-coral: rgba(255, 127, 80,1);
 
     --gradient-one: linear-gradient(var(--palette-cream) 20%, var(--palette-blue) 75%);
     --gradient-two: linear-gradient(var(--palette-cream) 20%, var(--palette-mandarin) 75%);
@@ -40,7 +40,8 @@ body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    cursor:url(../assets/icon-macpaint-pencil.png) 0 32, auto;
+    cursor:url(../assets/icon-macpaint-pencil.png) 0 31, auto;
+    -webkit-user-select: none;
 }
 
 #illustration
@@ -65,6 +66,7 @@ h2 {
 a
 {
     color: var(--palette-blue);
+    user-select: none;
     /* background-color: var(--palette-blue);  */
 }
 a:visited
@@ -156,6 +158,7 @@ a:hover
     height: 100vh;
     background-image: var(--gradient-overlay);
     pointer-events: none;
+    user-select: none;
 }
 
 .content
@@ -170,6 +173,7 @@ a:hover
     box-sizing: border-box;
     padding: 20px;
     padding-top: 100px;
+    user-select: none;
     /* right: 0; */
 }
 
@@ -200,6 +204,7 @@ a:hover
     border-radius: 10px;
     box-shadow: -5px 5px var(--palette-blue);
     filter:brightness(0.9);
+    user-select: none;
 }
 
 .portfolio-image img:hover

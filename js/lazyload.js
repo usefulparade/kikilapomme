@@ -44,9 +44,18 @@ let callback = (entries, observer) => {
     let i = 0;
     targets.forEach((target) =>
     {
-        let observer = new IntersectionObserver(handleIntersect, options);
-        observer.observe(target);
-        i++;
+        if ('IntersectionObserver' in window)
+        {
+
+          let observer = new IntersectionObserver(handleIntersect, options);
+          observer.observe(target);
+          i++;
+        }
+        else
+        {
+          target.style.filter = "opacity(1)";
+          target.style.transform = "translateY(0px)";
+        }
     });
 
     
