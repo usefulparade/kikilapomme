@@ -24,12 +24,14 @@
 
     <script>
         window.addEventListener('load', function() {
+            PicturesToGrid();
           baguetteBox.run('.gallery');
         });
     </script>
 
     <script src="./js/lazyload.js"></script>
-    <script src="./js/sketchbook.js"></script>
+    <script src="./js/sketchbook-three.js"></script>
+    <script src="./js/image-import.js"></script>
     <!-- <script src="./js/draggable.js"></script> -->
 
     
@@ -38,19 +40,19 @@
 
 <body id="illustration">
     
-    <a href="index.html"><div class="header">
+    <div class="header">
         <h1>Kiki Lapomme</h1>
         <!-- <h2>Illustrations by Natalie Soper</h2>  -->
-    </div></a>
+    </div>
 
     <div class="gradient-overlay">
 
     </div>
-
+    <div class="p5canvas" id="p5canvas"></div>
     <div class="gallery">
         <div class="content" id="lazyload-area">
-            <div class="p5canvas" id="p5canvas"></div>
-            <div class="portfolio-image" id="lazyload-img">
+            
+            <!-- <div class="portfolio-image" id="lazyload-img">
                 <a href="./assets/drawings/IMG_1096.JPG" data-caption="">
                     <img src="./assets/drawings/IMG_1096.JPG">
                 </a>
@@ -110,21 +112,21 @@
                     <img src="./assets/drawings/Horseblack.jpg">
                 </a>
             
-            </div>
+            </div> -->
             
         </div>
     </div>
 
 
     <div class="nav">
-        <a href="index.html"><span class="nav-item active" id="active">
-            <h3>drawings</h3>
-        </span></a><a href="notdrawings.html"><span class="nav-item">
-            <h3>not drawings</h3>
-        </span></a><a href="fanart.html"><span class="nav-item">
-            <h3>fanart</h3>
-        </span></a><a href="contact.html"><span class="nav-item">
-            <h3>contact</h3>
-        </span></a>
+        <a href="index.html"><span class="nav-item active" id="active"><h3>work</h3>
+        </span></a><a href="contact.html"><span class="nav-item"><h3>about</h3>
+        </span></a><a target="_blank" href="https://www.instagram.com/kiki.lapomme/?hl=en"><span class="nav-item nav-social" id=""><h3>📷</h3>
+        </span></a><a target="_blank" href="mailto:kikilapomme13@gmail.com"><span class="nav-item nav-social" id=""><h3>📮</h3>
+        </span></a><a target="_blank" href="https://pigimichi.bandcamp.com/"><span class="nav-item nav-social" id=""><h3>🎵</h3>
+    </div>
+
+    <div class="speaker">
+
     </div>
 </body>

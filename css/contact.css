@@ -1,6 +1,18 @@
+body {
+    border-color: var(--palette-coral);
+}
+
+.nav {
+    border-color: var(--palette-coral);
+}
+
+.nav-item#active {
+    background-color: var(--palette-coral);
+}
+
 #contact
 {
-    background-image: var(--gradient-four);
+    background-image: var(--gradient-one);
 }
 
 .content h3
@@ -20,16 +32,6 @@
     color: var(--palette-coral);
 }
 
-.nav-contact
-{
-    background-color: var(--palette-coral);
-}
-
-.nav-contact#active
-{
-    color: var(--palette-coral);
-}
-
 .content
 {
     vertical-align: top;
@@ -40,21 +42,20 @@
 {
     display: block;
     position: fixed;
-    width: 500px;
-    padding: 40px;
+    left:0px;
+    top: 0px;
+    /* width: 1000px; */
+    /* padding: 40px; */
     box-sizing: border-box;
     pointer-events: none;
     z-index: -30;
-    transform: rotate(-9deg);
+    /* transform: rotate(-9deg); */
 }
 
 
 .portrait img
 {
     width: 100%;
-    border: 4px solid var(--palette-coral);
-    border-radius: 10px;
-    box-shadow: -5px 5px var(--palette-coral);
     z-index: -20;
 }
 
@@ -62,8 +63,6 @@
 {
     display: block;
     position: fixed;
-    width: 90px;
-    padding: 40px;
     box-sizing: border-box;
     pointer-events: none;
     z-index: -30;
@@ -71,20 +70,21 @@
 
 .pin01
 {
-    width: 280px;
-    top: -20px;
-    left: 76%;
-    transform: rotate(18deg);
-    z-index:30;
+    width: 400px;
+    top: -90px;
+    right:-20px;
+    z-index:-30;
+    opacity:1;
 }
 
-.pin02
+.pin02 img
 {
-    width: 200px;
-    bottom: 130px;
-    left: calc(80%);
-    transform: rotate(-12deg);
-    z-index: 30;
+    display: block;
+    position: fixed;
+    max-width: 300px;
+    bottom: 0px;
+    left:50%;
+    z-index: -10;
 }
 
 .pin03
@@ -99,9 +99,9 @@
 .pinned img
 {
     width: 100%;
-    border: 4px solid var(--palette-coral);
+    /* border: 4px solid var(--palette-purple);
     border-radius: 10px;
-    box-shadow: -5px 5px var(--palette-coral);
+    box-shadow: -5px 5px var(--palette-purple); */
     z-index: -20;
 }
 
@@ -109,24 +109,34 @@
 {
     display: block;
     position: fixed;
-    top: 15%;
-    left: 20%;
+    top: 5%;
+    left: 15%;
     width: 66.66%;
-    padding: 40px;
-    padding-top: 0px;
+    padding: 2%;
     box-sizing: border-box;
     line-height: 1;
     cursor: text;
-    color: var(--palette-coral);
-    background-color: var(--palette-cream);
+    color: var(--palette-purple);
+    background-color: var(--palette-cream-transparent);
+    border: 5px solid var(--palette-coral);
     border-radius: 10px;
     margin-top: 7%;
-    max-height: calc(100% - 15% - 180px);
+    max-height: 70vh;
+    /* max-height: calc(100% - 15% - 180px); */
     
     /* height: calc(100% - 15% - 100px);
     max-height: 70%; */
-    overflow-y: scroll;
 
+}
+.about-inner
+{
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.about-inner p
+{
+    font-size: 1.75em;
 }
 
 @media only screen and (max-width: 1600px)
@@ -134,13 +144,6 @@
     .portrait
     {
         width: 400px;
-        
-    }
-
-    .pin03
-    {
-        width: 220px;
-        transform: rotate(8deg);
     }
 }
 
@@ -149,32 +152,20 @@
     
     .portrait
     {
-        width: 200px;
+        /* width: 50px; */
         padding: 0px;
-        display: none;
     }
 
     .pin01
     {
         width: 200px;
-        top: -70px;
-        left: 55%;
+        top: -50px;
+        right: 0px;
     }
 
-    .pin02
+    .about p
     {
-        width: 160px;
-        bottom: 130px;
-        left: calc(75%);
-        transform: rotate(-12deg);
-        z-index: 30;
-    }
-
-    .pin03
-    {
-        width: 140px;
-        left: -40px;
-        transform: rotate(8deg);
+        font-size: 1.5em;
     }
 
     .about
@@ -184,7 +175,17 @@
         margin-top: 0px;
         margin-left: 40px;
         width: calc(100% - 80px);
-        max-height: 80%;
+        padding: 2%;
+        max-height: 80vh;
+    }
+    .about-inner
+    {
+        width: 100%;
+        left: 0px;
+        margin-top: 0px;
+        /* margin-left: 40px; */
+        /* width: calc(100% - 10px); */
+        max-height: 75vh;
     }
 
     
