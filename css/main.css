@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "Title";
-    src: url("../assets/fonts/sans-bold.otf")
+    src: url("../assets/fonts/neue_medium.ttf")
 }
 
 @font-face {
     font-family: "Nav";
-    src: url("../assets/fonts/sans.otf")
+    src: url("../assets/fonts/neue_regular.ttf")
 }
 
 @font-face {
@@ -17,10 +17,11 @@
 
 @font-face {
     font-family: "Wiggle";
-    src: url("../assets/fonts/wiggle2.otf")
+    src: url("../assets/fonts/serif-thinitalic.ttf")
 }
 
 :root {
+    --palette-black: rgb(10, 24, 64);
     --palette-blue: rgba(30,83,235,1);
     --palette-cream: rgba(249,248,242,1);
     --palette-cream-transparent: rgba(249,248,242,0.75);
@@ -61,7 +62,7 @@ body {
 
 h1 {
     font-family: "Title", 'Helvetica', sans-serif;
-    font-size: 3em;
+    font-size: 5em;
     margin: 0px;
     padding: 0px;
 }
@@ -106,7 +107,7 @@ a:hover
 .header {
     display: block;
     position: fixed;
-    color: var(--palette-blue);
+    color: var(--palette-black);
     margin-left: 2%;
     margin-top: 2%;
     transform: rotate(-3deg);
@@ -218,9 +219,9 @@ a:hover
     position: relative;
     padding: 0px;
     min-height:100px;
-    border: solid 4px var(--palette-purple);
+    border: solid 4px transparent;
     border-radius: 10px;
-    box-shadow: -5px 5px var(--palette-purple);
+    /* box-shadow: -5px 5px var(--palette-purple); */
     filter:brightness(0.9);
     user-select: none;
     left:50%;
@@ -233,7 +234,7 @@ a:hover
 {
     border: solid 4px var(--palette-yellow);
     border-radius: 10px;
-    box-shadow: -5px 5px var(--palette-yellow);
+    /* box-shadow: -5px 5px var(--palette-yellow); */
     filter:brightness(1);
 }
 
@@ -281,6 +282,11 @@ a:hover
 }
 
 @media only screen and (max-width: 720px){
+    h1
+    {
+        font-size: 3em;
+    }
+    
     .nav 
     {
         height: 60px;
